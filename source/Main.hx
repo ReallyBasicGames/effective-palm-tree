@@ -5,6 +5,8 @@ import openfl.display.Sprite;
 
 class Main extends Sprite
 {
+	public static final VERSION:String = "0.0.1";
+
 	public function new()
 	{
 		super();
