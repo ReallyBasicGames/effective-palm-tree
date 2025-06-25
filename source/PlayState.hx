@@ -5,11 +5,19 @@ import flixel.text.FlxText;
 
 class PlayState extends FlxState
 {
-	override public function create()
+	// In PlayState.hx
+	var hud:GameHUD;
+	var player:Player;
+
+	override public function create():Void
 	{
 		super.create();
-		add(new FlxText("Hello World!", 32).screenCenter());
-		add(new FlxText("V" + Main.VERSION, 12));
+
+		// Create and add HUD
+		player = new Player();
+		hud = new GameHUD();
+		// add(new FlxText("V" + Main.VERSION, 12));
+		add(hud);
 	}
 
 	override public function update(elapsed:Float)
